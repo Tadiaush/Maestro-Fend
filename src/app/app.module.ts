@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import {MaterialModule} from "@angular/material";
 import { ClerkComponent } from './clerk/clerk.component';
 import { UserComponent } from './user/user.component';
-import {AlertModule} from 'ng2-bootstrap/ng2-bootstrap';
+import {AlertModule} from 'ng2-bootstrap';
 
 
 
@@ -30,6 +30,7 @@ const appRoutes : Routes = [
     MaterialModule,
     AlertModule,
     RouterModule.forRoot(appRoutes)
+
   ],
 
   bootstrap: [AppComponent]

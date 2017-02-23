@@ -9,14 +9,17 @@ export class UserComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-  name='First name';
-  lastName='Last name';
+  name="First name";
+  lastName="Last name";
   personalID='Personal ID'
   documentNumber = 'Document number'
   streetName= 'Street name'
   telephoneNumber1='Telephone number 1'
   telephoneNumber2='Telephone number 2'
   email='Email'
+
+
+
+  ngOnInit() {
+  }
 }
