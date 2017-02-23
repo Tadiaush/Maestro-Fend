@@ -5,18 +5,28 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {MaterialModule} from "@angular/material";
+import {RouterModule} from "@angular/router";
+import { ClerkComponent } from './clerk/clerk/clerk.component';
+import { ClerkComponent } from './clerk/clerk.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    ClerkComponent,
+    ClerkComponent,
+    ClerkComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [],
+  providers: [LoggingService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

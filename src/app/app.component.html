@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+<h1>Swedbank loan</h1>
+</header>
+  <div class="button-row">
+    <li><a [routerLink]="['user']"><button md-raised-button>User</button></a></li>
+    <li><a [routerLink]="['clerk']"><button md-raised-button>Clerk</button></a></li>
+</div>
+<section id="name">
+  <router-outlet></router-outlet>
+</section>
