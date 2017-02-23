@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  template:` <button md-raised-button>Button</button>
+  template:` <h1>Swedbank loan</h1>
+            <div class="button-row">           
+            <button md-raised-button>User</button>
+            <button md-raised-button>Clerk</button>
+            </div>
 `
 })
 export class AppComponent {
