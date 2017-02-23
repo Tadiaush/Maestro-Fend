@@ -1,6 +1,7 @@
 import {ClerkComponent} from "./clerk/clerk.component";
 import {UserComponent} from "./user/user.component";
-export const APP_ROUTES = [
+import {Routes} from "@angular/router";
+const appRoutes : Routes = [
   {path: 'user', component: UserComponent},
   {path: 'clerk', component: ClerkComponent}
 ];

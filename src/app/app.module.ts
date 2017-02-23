@@ -2,20 +2,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule, Routes} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import {MaterialModule} from "@angular/material";
-import {RouterModule} from "@angular/router";
-import { ClerkComponent } from './clerk/clerk/clerk.component';
 import { ClerkComponent } from './clerk/clerk.component';
 import { UserComponent } from './user/user.component';
+import {AlertModule} from 'ng2-bootstrap/ng2-bootstrap';
+
+
+
+const appRoutes : Routes = [
+  {path: 'user', component: UserComponent},
+  {path: 'clerk', component: ClerkComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    ClerkComponent,
-    ClerkComponent,
     ClerkComponent,
     UserComponent
   ],
@@ -24,9 +28,10 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     HttpModule,
     MaterialModule,
-    RouterModule.forRoot(APP_ROUTES)
+    AlertModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [LoggingService, DataService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
