@@ -6,9 +6,10 @@ import { RouterModule, Routes} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import {MaterialModule} from "@angular/material";
-import { ClerkComponent } from './clerk/clerk.component';
+import {LoanComponent} from './clerk/loan.component';
 import { UserComponent } from './user/user.component';
 import {AlertModule} from 'ng2-bootstrap';
+import {LoanDetailsComponent} from "./clerk/loan-details.component";
 
 
 
@@ -20,8 +21,9 @@ import {AlertModule} from 'ng2-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
-    ClerkComponent,
-    UserComponent
+    LoanComponent,
+    UserComponent,
+    LoanDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import {AlertModule} from 'ng2-bootstrap';
       },
       {
         path: 'clerk',
-        component: ClerkComponent
+        component: LoanComponent
       }
     ])
 

@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><h1 style="text-align:center">Vartojimo paskolos</h1></div>
+  <table class="table table-striped" >
+    <thead class="thead-inverse">
+    <tr>
+      <th>Id</th>
+      <th>Amount</th>
+      <th>Name</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let loan of loans" align="left"
+        [class.selected]="loan === selectedLoan"
+        (click) = "onSelect(loan)">
+      <td>
+        {{loan.id}}
+      </td>
+      <td  >
+        {{loan.amount}}
+      </td>
+      <td>
+        {{loan.name}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<my-loan-details [loan]="selectedLoan"></my-loan-details>

@@ -1,4 +1,4 @@
-import {ClerkComponent} from "./clerk/clerk.component";
+import {ClerkComponent} from "./clerk/loan.component";
 import {UserComponent} from "./user/user.component";
 import {Routes} from "@angular/router";
 const appRoutes : Routes = [
