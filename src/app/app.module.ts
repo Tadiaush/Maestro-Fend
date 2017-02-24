@@ -12,10 +12,10 @@ import {AlertModule} from 'ng2-bootstrap';
 
 
 
-const appRoutes : Routes = [
-  {path: 'user', component: UserComponent},
-  {path: 'clerk', component: ClerkComponent}
-];
+// const appRoutes : Routes = [
+//   {path: 'user', component: UserComponent},
+//   {path: 'clerk', component: ClerkComponent}
+// ];
 
 @NgModule({
   declarations: [
@@ -29,7 +29,20 @@ const appRoutes : Routes = [
     HttpModule,
     MaterialModule,
     AlertModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot([
+      {
+        path: ' ',
+        component: AppComponent
+      },
+      {
+        path: 'user',
+        component: UserComponent
+      },
+      {
+        path: 'clerk',
+        component: ClerkComponent
+      }
+    ])
 
   ],
 

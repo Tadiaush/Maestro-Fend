@@ -10,41 +10,60 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
-<body ng-app="myApp">
+<!--<body ng-app="myApp">-->
 
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand">Maestro loans</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#/">Home</a></li>
-      <li><a href="user">User</a></li>
-      <li><a href="#clerk">Clerk</a></li>
+<!--<nav class="navbar navbar-default">-->
+  <!--<div class="container">-->
+    <!--<div class="navbar-header">-->
+      <!--<a class="navbar-brand">Maestro loans</a>-->
+    <!--</div>-->
+    <!--<ul class="nav navbar-nav">-->
+      <!--<li class="active"><a href="#/">Home</a></li>-->
+      <!--<li><a href="user">User</a></li>-->
+      <!--<li><a href="#clerk">Clerk</a></li>-->
 
-    </ul>
-  </div>
-</nav>
+    <!--</ul>-->
+  <!--</div>-->
+<!--</nav>-->
 
-<div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div>
+<!--<div class="container">-->
+  <!--<h3>Basic Navbar Example</h3>-->
+  <!--<p>A navigation bar is a navigation header that is placed at the top of the page.</p>-->
+<!--</div>-->
 
-</body>
+<!--</body>-->
 </html>
-<script>
-  var app=angular.module("myApp", ["ngRoute"]);
-  app.config(function ($routeProvider) {
-    $routeProvider
-      .when("/", {
-          templateUrl: "app.component.htm"
-      })
-      .when("/user", {
-         templateUrl: "user.htm"
-        })
-      .when("/clerk", {
-        templateUrl: "clerk.htm"
-      })
-  });
-</script>
+<!--<script>-->
+  <!--var app=angular.module("myApp", ["ngRoute"]);-->
+  <!--app.config(function ($routeProvider) {-->
+    <!--$routeProvider-->
+      <!--.when("/", {-->
+          <!--templateUrl: "app.component.htm"-->
+      <!--})-->
+      <!--.when("/user", {-->
+         <!--templateUrl: "user.htm"-->
+        <!--})-->
+      <!--.when("/clerk", {-->
+        <!--templateUrl: "clerk.htm"-->
+      <!--})-->
+  <!--});-->
+<!--</script>-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      </button>
+      <a class="navbar-brand" href="#">MAESTRO LOANS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/clerk">Clerk</a></li>
+        <li><a routerLink="/user">User</a></li>
+      </ul>
+      <router-outlet></router-outlet>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
